@@ -17,8 +17,12 @@
             <li class="blog-post">
                 <h2><%= post.title %></h2>
                 <p><%= post.content %></p>
-                <a href="/edit/<%= post._id %>" id="edit">Edit</a>
-                <a href="/delete/<%= post._id %>" onclick="return confirm('>> Are you sure?');" id="delete">Delete</a>
+                <br><br>
+                <small><i>Posted by: <%= post.username || 'Anonymous' %></i></small>
+                <div class="li-option">
+                    <a href="/edit/<%= post._id %>" id="edit">Edit</a>
+                    <a href="/delete/<%= post._id %>" onclick="return confirm('Are you sure?');" id="delete">Delete</a>
+                </div>
             </li>
         <% }); %>
         </ul>
