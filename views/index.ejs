@@ -18,7 +18,7 @@
                 <h2><%= post.title %></h2>
                 <p><%= post.content %></p>
                 <br><br>
-                <small><i>Posted by: <%= post.username || 'Anonymous' %></i></small>
+                <small><i>Posted by: <%= post.username || 'Anonymous' %> on <%= post.createdAt.toLocaleDateString() %></i></small>
                 <div class="li-option">
                     <a href="/edit/<%= post._id %>" id="edit">Edit</a>
                     <a href="/delete/<%= post._id %>" onclick="return confirm('Are you sure?');" id="delete">Delete</a>

@@ -12,8 +12,8 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/add', async (req, res) => {
-  const { title, content } = req.body;
-  await Blog.create({ title, content });
+  const { username, title, content } = req.body;
+  await Blog.create({ username, title, content });
   res.redirect('/');
 });
 
@@ -23,8 +23,8 @@ router.get('/edit/:id', async (req, res) => {
 });
 
 router.post('/update/:id', async (req, res) => {
-  const { title, content } = req.body;
-  await Blog.findByIdAndUpdate(req.params.id, { title, content });
+  const { username, title, content } = req.body;
+  await Blog.findByIdAndUpdate(req.params.id, { username, title, content });
   res.redirect('/');
 });
 
