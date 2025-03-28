@@ -1,0 +1,155 @@
+:root {
+    --main-bg: #0A0F1E;
+    --outer-bg: #2c354ee6;
+
+    --input-bg: #0A1417;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    color: #E5E5E5;
+    font-family: monospace, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #111; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--outer-bg); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00C3FF;
+    box-shadow: 0px 0px 5px #00c3ff; 
+}
+
+body {
+    background: var(--main-bg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+}
+
+.main-container {
+    background: var(--outer-bg);
+    width: 90%;
+    min-height: 90vh;
+    padding: 5%;
+    border-radius: 2px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.modify-container {
+    background: var(--outer-bg);
+    width: 50%;
+    min-height: 90vh;
+    padding: 5%;
+    border-radius: 2px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.main-container h1 {
+    text-shadow: 3px 3px 0 #000;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+.modify-container h1 {
+    text-shadow: 3px 3px 0 #000;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.modify-container form {
+    text-shadow: 2px 2px 0 #000;
+    padding: 5% 0;
+    letter-spacing: 2px;
+}
+
+.modify-container label {
+    font-weight: 700;
+}
+
+.modify-container input, .modify-container textarea, .modify-container button {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid #E5E5E5;
+    padding: 10px;
+    margin: 1% 0;
+}
+
+.modify-container input {
+    height: 30px;
+}
+
+.modify-container textarea {
+    height: 190px;
+    resize: none;
+}
+
+.modify-container button {
+    padding: 0;
+    width: 30%;
+    height: 30px;
+
+    transition: all .2s ease-in-out;
+}
+
+.modify-container button:hover {
+    background-color: #0099E6;
+    transform: scale(1.05);
+}
+
+.main-container a {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #80E1FF;
+    transition: all .2s ease-in-out;
+}
+
+.main-container a:hover {
+    color: #0099E6;
+    transform: scale(1.05);
+}
+
+.main-container .blog-post {
+    list-style: none;
+    padding: 2%;
+    margin: 3% 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
+.blog-post h2 {
+    text-shadow: 3px 3px 0 #000;
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-bottom: 1%;
+}
+
+.blog-post p {
+    word-wrap: break-word;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.blog-post #delete {
+    color: #FF6B6B;
+    transition: all .2s;
+}
+
+.blog-post #delete:hover {
+    color: #ff0000;
+}
